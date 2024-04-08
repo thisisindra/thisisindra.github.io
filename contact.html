@@ -54,17 +54,17 @@
         <strong>Terima Kasih!</strong> Pesan Anda Telah Berhasil Terkirim.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
-      <form name="form-contact">
+      <form name="form-contact" autocomplete="off">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Masukkan Nama Anda" name="nama" />
+          <input type="text" class="form-control" id="floatingInput" placeholder="Masukkan Nama Anda" name="nama" autofocus required />
           <label for="floatingInput">Username</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="Masukkan Email Anda" name="email" />
+          <input type="email" class="form-control" id="floatingPassword" placeholder="Masukkan Email Anda" name="email" required />
           <label for="floatingPassword">Email</label>
         </div>
         <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="Silahkan Tinggalkan Pesan" id="floatingTextarea2" style="height: 100px" name="pesan"></textarea>
+          <textarea class="form-control" placeholder="Silahkan Tinggalkan Pesan" id="floatingTextarea2" style="height: 100px" name="pesan" required></textarea>
           <label for="floatingTextarea2">Pesan</label>
         </div>
         <button type="submit" class="btn btn-primary btn-kirim" style="font-family: 'Permanent Marker', cursive">Kirim</button>
