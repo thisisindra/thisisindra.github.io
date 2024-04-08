@@ -50,21 +50,29 @@
     <!--contact-->
     <div class="container_form">
       <h1 class="judul_contact">Hii..! Silahkan Tinggalkan Pesan</h1>
-      <div class="form">
+      <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+        <strong>Terima Kasih!</strong> Pesan Anda Telah Berhasil Terkirim.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <form name="form-contact">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Masukkan Nama Anda" />
+          <input type="text" class="form-control" id="floatingInput" placeholder="Masukkan Nama Anda" name="nama" />
           <label for="floatingInput">Username</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="Masukkan Email Anda" />
+          <input type="text" class="form-control" id="floatingPassword" placeholder="Masukkan Email Anda" name="email" />
           <label for="floatingPassword">Email</label>
         </div>
         <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="Silahkan Tinggalkan Pesan" id="floatingTextarea2" style="height: 100px"></textarea>
+          <textarea class="form-control" placeholder="Silahkan Tinggalkan Pesan" id="floatingTextarea2" style="height: 100px" name="pesan"></textarea>
           <label for="floatingTextarea2">Pesan</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
+        <button type="submit" class="btn btn-primary btn-kirim" style="font-family: 'Permanent Marker', cursive">Kirim</button>
+        <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+          <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+          <span role="status">Loading...</span>
+        </button>
+      </form>
     </div>
     <!--akhir contact-->
 
@@ -77,5 +85,33 @@
 
     <!-- javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzz_m_MXexGDsoMhrImm5_kRK3ZhHcP86HNA5-Dq7lzAq4NvD7pTr5M020VGTk3_Fj9/exec";
+      const form = document.forms["form-contact"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        //ketika submit diklik
+        //tampilkan loading, hilangkan kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            //tampilkan kirim, hilangkan loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // tampilkan alert
+            myAlert.classList.toggle("d-none");
+            //reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
