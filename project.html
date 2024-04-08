@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Indra Senli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Animate.css -->
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Css -->
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet" />
+    <!-- google font -->
+  </head>
+  <body class="bg-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" style="font-family: 'Permanent Marker', cursive">Indra Senli</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="aboutme.html" style="font-family: 'Permanent Marker', cursive">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="project.html" style="font-family: 'Permanent Marker', cursive">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" style="font-family: 'Permanent Marker', cursive">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="font-family: 'Permanent Marker', cursive">Download Cv</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!--Isi project  -->
+    <div class="container_project" style="margin: auto">
+      <h1 class="tulisan_project" style="font-family: 'Permanent Marker', cursive">Tunggu yaa, Semua Project Yang Telah Saya Kerjakan Akan Segera Ditampilkan Disini!</h1>
+    </div>
+
+    <!--<div class="card-group">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>-->
+
+    <!--Akhir Isi project  -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>2024 Copyright Indra Senli</p>
+    </div>
+
+    <!-- Akhir Footer -->
+
+    <!-- javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elements = document.getElementsByClassName("tulisan_project");
+        var index = 0;
+        var typingSpeed = 100; // ms per character
+        var cursorSpeed = 200; // ms per blink
+        var cursorDisplay = "inline";
+
+        function type() {
+          if (index < elements.length) {
+            var text = elements[index].textContent;
+            elements[index].textContent = "";
+            var i = 0;
+            var typingInterval = setInterval(function () {
+              if (i < text.length) {
+                elements[index].textContent += text.charAt(i);
+                i++;
+              } else {
+                clearInterval(typingInterval);
+                setTimeout(function () {
+                  index++;
+                  type();
+                }, 2000);
+              }
+            }, typingSpeed);
+          }
+        }
+
+        type();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+/* css file index*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* pengaturan animate.css */
+h1 {
+  --animate-duration: 2s;
+}
+
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+#foto {
+  --animate-duration: 3s;
+}
+
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 2s;
+}
+.teks_dua {
+  --animate-duration: 2s;
+}
+
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 2s;
+}
+.teks_tiga {
+  --animate-duration: 2s;
+}
+
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 2s;
+}
+
+/* akhir animate.css*/
+
+.foto_saya {
+  width: 400px;
+  margin-top: 40px;
+}
+
+.slide_satu {
+  display: flex;
+  justify-content: center;
+}
+.tulisanSatu {
+  width: 200px;
+  margin-top: 30px;
+}
+#tulisanSatuIsi {
+  margin-top: 90px;
+  font-size: 35px;
+  font-family: "Protest Riot", sans-serif;
+}
+
+/* pengaturan carausel*/
+.content {
+  flex: 1;
+}
+.carousel-inner {
+  position: relative;
+  height: 530px;
+}
+#foto {
+  box-sizing: border-box;
+}
+
+/*footer*/
+.footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footer p {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 35%;
+}
+.slide_dua {
+  display: flex;
+  justify-content: center;
+}
+.tulisan_dua {
+  width: 220px;
+  height: 300px;
+  margin-top: 90px;
+}
+
+.teks_dua {
+  color: white;
+  font-size: 30px;
+  font-family: "Protest Riot", sans-serif;
+}
+.slide_tiga {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+.tulisan_tiga {
+  width: 250px;
+  height: 400px;
+}
+.teks_tiga {
+  color: white;
+  font-size: 30px;
+  font-family: "Protest Riot", sans-serif;
+}
+
+/* pengturan queri foto */
+@media (max-width: 749px) {
+  .carousel-inner {
+    position: static;
+    height: 700px;
+  }
+  .slide_satu {
+    display: block;
+  }
+  .tulisanSatu {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    height: auto;
+  }
+  #tulisanSatuIsi {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: "Protest Riot", sans-serif;
+  }
+
+  .foto_saya {
+    margin: auto;
+    margin-top: 40px;
+    width: 80%;
+    height: auto;
+  }
+  #foto {
+    margin: auto;
+  }
+}
+/*akhir css file index*/
+
+/*css file aboutme*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.card {
+  margin: 60px auto;
+}
+/*animated aboutme*/
+#card_aboutme {
+  --animate-duration: 1.7s;
+}
+/*akhir animated aboutme*/
+/*media queri aboutme*/
+@media (max-width: 820x) {
+  .card {
+    width: 200px;
+  }
+}
+/*akhir media queri aboutme*/
+/*akhir css file aboutme*/
+
+/*css file contact*/
+.container_form {
+  position: relative;
+  width: 450px;
+  margin: auto;
+}
+.form {
+  margin: 30px auto;
+  border-radius: 15px;
+  border: solid seashell;
+  padding: 20px;
+}
+.judul_contact {
+  font-size: 25px;
+  color: seashell;
+  text-align: center;
+  margin-top: 30px;
+  font-family: Permanent Marker, cursive;
+}
+/*pengaturan queri contact*/
+
+@media (max-width: 820x) {
+  .container_form {
+    width: 500px;
+    margin-top: 40px;
+  }
+  .judul_contact {
+    font-size: 20px;
+  }
+}
+@media (max-width: 440px) {
+  .container_form {
+    width: 300px;
+    margin-top: 40px;
+  }
+  .judul_contact {
+    font-size: 18px;
+  }
+}
+
+/*akhir pengaturan queri contact*/
+/*akhir css file contact*/
+
+/*file css project*/
+.tulisan_project {
+  text-align: center;
+  color: seashell;
+  padding: 20px;
+}
+/*akhir file css project*/
