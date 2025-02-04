@@ -167,12 +167,14 @@ body {
   --animate-duration: 1.7s;
 }
 /*akhir animated aboutme*/
+
 /*media queri aboutme*/
 @media (max-width: 820x) {
   .card {
     width: 200px;
   }
 }
+
 /*akhir media queri aboutme*/
 /*akhir css file aboutme*/
 
